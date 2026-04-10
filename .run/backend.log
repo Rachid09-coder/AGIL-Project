@@ -25,3 +25,1520 @@
 [INFO] 
 [INFO] --- spring-boot:3.3.5:run (default-cli) @ smart-parking-backend ---
 [INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.5)
+
+2026-04-10T19:40:25.565+01:00  INFO 17008 --- [           main] com.sndp.fleet.SmartParkingApplication   : Starting SmartParkingApplication using Java 21.0.10 with PID 17008 (C:\Users\rachi\OneDrive\Bureau\Smart Parking\backend\target\classes started by Rachid in C:\Users\rachi\OneDrive\Bureau\Smart Parking\backend)
+2026-04-10T19:40:25.567+01:00  INFO 17008 --- [           main] com.sndp.fleet.SmartParkingApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-04-10T19:40:26.313+01:00  INFO 17008 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-10T19:40:26.379+01:00  INFO 17008 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 5 JPA repository interfaces.
+2026-04-10T19:40:27.029+01:00  INFO 17008 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-04-10T19:40:27.050+01:00  INFO 17008 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-10T19:40:27.051+01:00  INFO 17008 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-04-10T19:40:27.125+01:00  INFO 17008 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-10T19:40:27.126+01:00  INFO 17008 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1515 ms
+2026-04-10T19:40:27.274+01:00  INFO 17008 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-10T19:40:27.343+01:00  INFO 17008 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-04-10T19:40:27.414+01:00  INFO 17008 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-04-10T19:40:27.768+01:00  INFO 17008 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-10T19:40:27.803+01:00  INFO 17008 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-10T19:40:28.005+01:00  INFO 17008 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6e517c9e
+2026-04-10T19:40:28.007+01:00  INFO 17008 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-10T19:40:28.068+01:00  WARN 17008 --- [           main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-04-10T19:40:29.172+01:00  INFO 17008 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-10T19:40:29.280+01:00  INFO 17008 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-10T19:40:29.852+01:00  INFO 17008 --- [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-04-10T19:40:31.122+01:00  INFO 17008 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-04-10T19:40:31.134+01:00  INFO 17008 --- [           main] com.sndp.fleet.SmartParkingApplication   : Started SmartParkingApplication in 6.015 seconds (process running for 6.403)
+Hibernate: 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.username=? 
+    limit
+        ?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.username=? 
+    limit
+        ?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.username=? 
+    limit
+        ?
+Hibernate: 
+    insert 
+    into
+        users
+        (email, full_name, password, role, username) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.username=? 
+    limit
+        ?
+Hibernate: 
+    insert 
+    into
+        users
+        (email, full_name, password, role, username) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.username=? 
+    limit
+        ?
+Hibernate: 
+    insert 
+    into
+        users
+        (email, full_name, password, role, username) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        count(*) 
+    from
+        vehicle v1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        mission m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        declaration d1_0
+2026-04-10T19:41:15.382+01:00  INFO 17008 --- [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-10T19:41:15.383+01:00  INFO 17008 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-10T19:41:15.401+01:00  INFO 17008 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.role=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        v1_0.id,
+        v1_0.brand,
+        v1_0.model,
+        v1_0.plate_number,
+        v1_0.status 
+    from
+        vehicle v1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        mr1_0.id,
+        mr1_0.created_at,
+        mr1_0.description,
+        mr1_0.driver_id,
+        mr1_0.request_type,
+        mr1_0.status,
+        mr1_0.vehicle_id 
+    from
+        maintenance_request mr1_0
+Hibernate: 
+    select
+        d1_0.id,
+        d1_0.declaration_date,
+        d1_0.description,
+        d1_0.driver_id,
+        d1_0.manager_comment,
+        d1_0.type 
+    from
+        declaration d1_0
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.description,
+        m1_0.destination,
+        m1_0.driver_id,
+        m1_0.end_date,
+        m1_0.start_date,
+        m1_0.status,
+        m1_0.title,
+        m1_0.vehicle_id 
+    from
+        mission m1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.role=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.role=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        v1_0.id,
+        v1_0.brand,
+        v1_0.model,
+        v1_0.plate_number,
+        v1_0.status 
+    from
+        vehicle v1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        vehicle v1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        mission m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        declaration d1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        v1_0.id,
+        v1_0.brand,
+        v1_0.model,
+        v1_0.plate_number,
+        v1_0.status 
+    from
+        vehicle v1_0 
+    where
+        v1_0.id=?
+Hibernate: 
+    select
+        mr1_0.id,
+        mr1_0.created_at,
+        mr1_0.description,
+        mr1_0.driver_id,
+        mr1_0.request_type,
+        mr1_0.status,
+        mr1_0.vehicle_id 
+    from
+        maintenance_request mr1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.role=?
+Hibernate: 
+    select
+        count(*) 
+    from
+        vehicle v1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        mission m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        declaration d1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.description,
+        m1_0.destination,
+        m1_0.driver_id,
+        m1_0.end_date,
+        m1_0.start_date,
+        m1_0.status,
+        m1_0.title,
+        m1_0.vehicle_id 
+    from
+        mission m1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        d1_0.id,
+        d1_0.declaration_date,
+        d1_0.description,
+        d1_0.driver_id,
+        d1_0.manager_comment,
+        d1_0.type 
+    from
+        declaration d1_0
+Hibernate: 
+    select
+        v1_0.id,
+        v1_0.brand,
+        v1_0.model,
+        v1_0.plate_number,
+        v1_0.status 
+    from
+        vehicle v1_0 
+    where
+        v1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        v1_0.id,
+        v1_0.brand,
+        v1_0.model,
+        v1_0.plate_number,
+        v1_0.status 
+    from
+        vehicle v1_0 
+    where
+        v1_0.id=?
+Hibernate: 
+    insert 
+    into
+        mission
+        (description, destination, driver_id, end_date, start_date, status, title, vehicle_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.description,
+        m1_0.destination,
+        m1_0.driver_id,
+        m1_0.end_date,
+        m1_0.start_date,
+        m1_0.status,
+        m1_0.title,
+        m1_0.vehicle_id 
+    from
+        mission m1_0
+Hibernate: 
+    select
+        mr1_0.id,
+        mr1_0.created_at,
+        mr1_0.description,
+        mr1_0.driver_id,
+        mr1_0.request_type,
+        mr1_0.status,
+        mr1_0.vehicle_id 
+    from
+        maintenance_request mr1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        v1_0.id,
+        v1_0.brand,
+        v1_0.model,
+        v1_0.plate_number,
+        v1_0.status 
+    from
+        vehicle v1_0 
+    where
+        v1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.role=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.role=?
+Hibernate: 
+    select
+        count(*) 
+    from
+        vehicle v1_0
+Hibernate: 
+    select
+        d1_0.id,
+        d1_0.declaration_date,
+        d1_0.description,
+        d1_0.driver_id,
+        d1_0.manager_comment,
+        d1_0.type 
+    from
+        declaration d1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        mission m1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        v1_0.id,
+        v1_0.brand,
+        v1_0.model,
+        v1_0.plate_number,
+        v1_0.status 
+    from
+        vehicle v1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        declaration d1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        v1_0.id,
+        v1_0.brand,
+        v1_0.model,
+        v1_0.plate_number,
+        v1_0.status 
+    from
+        vehicle v1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        v1_0.id,
+        v1_0.brand,
+        v1_0.model,
+        v1_0.plate_number,
+        v1_0.status 
+    from
+        vehicle v1_0
+Hibernate: 
+    select
+        d1_0.id,
+        d1_0.declaration_date,
+        d1_0.description,
+        d1_0.driver_id,
+        d1_0.manager_comment,
+        d1_0.type 
+    from
+        declaration d1_0 
+    where
+        d1_0.driver_id=?
+Hibernate: 
+    select
+        mr1_0.id,
+        mr1_0.created_at,
+        mr1_0.description,
+        mr1_0.driver_id,
+        mr1_0.request_type,
+        mr1_0.status,
+        mr1_0.vehicle_id 
+    from
+        maintenance_request mr1_0 
+    where
+        mr1_0.driver_id=?
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.description,
+        m1_0.destination,
+        m1_0.driver_id,
+        m1_0.end_date,
+        m1_0.start_date,
+        m1_0.status,
+        m1_0.title,
+        m1_0.vehicle_id 
+    from
+        mission m1_0 
+    where
+        m1_0.driver_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        v1_0.id,
+        v1_0.brand,
+        v1_0.model,
+        v1_0.plate_number,
+        v1_0.status 
+    from
+        vehicle v1_0 
+    where
+        v1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        d1_0.id,
+        d1_0.declaration_date,
+        d1_0.description,
+        d1_0.driver_id,
+        d1_0.manager_comment,
+        d1_0.type 
+    from
+        declaration d1_0 
+    where
+        d1_0.driver_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.description,
+        m1_0.destination,
+        m1_0.driver_id,
+        m1_0.end_date,
+        m1_0.start_date,
+        m1_0.status,
+        m1_0.title,
+        m1_0.vehicle_id 
+    from
+        mission m1_0 
+    where
+        m1_0.driver_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        mr1_0.id,
+        mr1_0.created_at,
+        mr1_0.description,
+        mr1_0.driver_id,
+        mr1_0.request_type,
+        mr1_0.status,
+        mr1_0.vehicle_id 
+    from
+        maintenance_request mr1_0 
+    where
+        mr1_0.driver_id=?
+Hibernate: 
+    select
+        v1_0.id,
+        v1_0.brand,
+        v1_0.model,
+        v1_0.plate_number,
+        v1_0.status 
+    from
+        vehicle v1_0 
+    where
+        v1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        v1_0.id,
+        v1_0.brand,
+        v1_0.model,
+        v1_0.plate_number,
+        v1_0.status 
+    from
+        vehicle v1_0
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.description,
+        m1_0.destination,
+        m1_0.driver_id,
+        m1_0.end_date,
+        m1_0.start_date,
+        m1_0.status,
+        m1_0.title,
+        m1_0.vehicle_id 
+    from
+        mission m1_0 
+    where
+        m1_0.driver_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        mr1_0.id,
+        mr1_0.created_at,
+        mr1_0.description,
+        mr1_0.driver_id,
+        mr1_0.request_type,
+        mr1_0.status,
+        mr1_0.vehicle_id 
+    from
+        maintenance_request mr1_0 
+    where
+        mr1_0.driver_id=?
+Hibernate: 
+    select
+        v1_0.id,
+        v1_0.brand,
+        v1_0.model,
+        v1_0.plate_number,
+        v1_0.status 
+    from
+        vehicle v1_0 
+    where
+        v1_0.id=?
+Hibernate: 
+    select
+        d1_0.id,
+        d1_0.declaration_date,
+        d1_0.description,
+        d1_0.driver_id,
+        d1_0.manager_comment,
+        d1_0.type 
+    from
+        declaration d1_0 
+    where
+        d1_0.driver_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        v1_0.id,
+        v1_0.brand,
+        v1_0.model,
+        v1_0.plate_number,
+        v1_0.status 
+    from
+        vehicle v1_0
+Hibernate: 
+    select
+        mr1_0.id,
+        mr1_0.created_at,
+        mr1_0.description,
+        mr1_0.driver_id,
+        mr1_0.request_type,
+        mr1_0.status,
+        mr1_0.vehicle_id 
+    from
+        maintenance_request mr1_0 
+    where
+        mr1_0.driver_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.description,
+        m1_0.destination,
+        m1_0.driver_id,
+        m1_0.end_date,
+        m1_0.start_date,
+        m1_0.status,
+        m1_0.title,
+        m1_0.vehicle_id 
+    from
+        mission m1_0 
+    where
+        m1_0.driver_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        d1_0.id,
+        d1_0.declaration_date,
+        d1_0.description,
+        d1_0.driver_id,
+        d1_0.manager_comment,
+        d1_0.type 
+    from
+        declaration d1_0 
+    where
+        d1_0.driver_id=?
+Hibernate: 
+    select
+        v1_0.id,
+        v1_0.brand,
+        v1_0.model,
+        v1_0.plate_number,
+        v1_0.status 
+    from
+        vehicle v1_0 
+    where
+        v1_0.id=?
