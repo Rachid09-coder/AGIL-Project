@@ -17,7 +17,10 @@ function Stop-ByPidFile {
 
 function Stop-PortProcess {
     param([int]$Port)
-    $connections = Get-NetTCPConnection -LocalPort $Port -State Listen
+    $connections = Get-NetTCPConnection -LocalPort $Port -State Listen -ErrorAction SilentlyContinue
+    if (-not $connections) {
+        return
+    }
     foreach ($conn in $connections) {
         if ($conn.OwningProcess -and $conn.OwningProcess -ne 0) {
             Stop-Process -Id $conn.OwningProcess -Force

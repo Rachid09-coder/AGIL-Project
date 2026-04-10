@@ -31,7 +31,8 @@ $backendScriptPath = Join-Path $scriptsPath 'start-backend.ps1'
 $backendProc = Start-Process powershell -ArgumentList @('-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', ('"{0}"' -f $backendScriptPath)) -RedirectStandardOutput $backendLog -RedirectStandardError $backendErrLog -PassThru
 $backendProc.Id | Set-Content -Path $backendPidFile
 
-Start-Sleep -Seconds 2
+Write-Host 'En attente du démarrage du backend (15 secondes)...'
+Start-Sleep -Seconds 15
 
 Write-Host 'Démarrage frontend (5173)...'
 $frontendScriptPath = Join-Path $scriptsPath 'start-frontend.ps1'
@@ -45,7 +46,8 @@ Write-Host " - Logs backend:  $backendLog"
 Write-Host " - Logs frontend: $frontendLog"
 Write-Host 'Utilisez stop-all.ps1 pour arrêter les services.'
 
-Start-Sleep -Seconds 2
+Write-Host 'En attente du démarrage du frontend...'
+Start-Sleep -Seconds 5
 try {
 	Start-Process $siteUrl | Out-Null
 	Write-Host "Ouverture du site: $siteUrl"
